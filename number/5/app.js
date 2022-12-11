@@ -3,7 +3,7 @@ const b = 3;
 const c = a % b;
 
 if (a % b === 0) {
-  console.log('Делится: ', c);
+  console.log(`Divide: ${c}`);
 } else {
-  console.log('Делится с остатком: ', c);
+  console.log(`Divide with the remains: ${c}`);
 }
