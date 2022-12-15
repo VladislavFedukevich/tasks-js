@@ -7,4 +7,5 @@ if (isNaN(str)) {
   console.log(str.join(' '))
 } else {
   console.log("Error");
+  
 }
