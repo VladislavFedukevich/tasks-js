@@ -5,3 +5,4 @@ if (isNaN(str)) {
 } else {
   console.log('Error');
 }
+
