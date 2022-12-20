@@ -1,4 +1,4 @@
-let str = 'anna';
+let str = "anna";
 let isPalindrome = true;
 
 for (let i = 0; i < str.length / 2; i++) {
