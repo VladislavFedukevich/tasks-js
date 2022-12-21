@@ -7,4 +7,4 @@ for (const value of array) {
   }
 }
 
-console.log(max); 
+console.log(max);

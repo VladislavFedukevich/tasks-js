@@ -1,4 +1,4 @@
-const str = 'шалаш';
+const str = "шалаш";
 let isPalindrome = true;
 for (let i = 0; i < str.length; i++) {
   if (str[i] !== str[str.length - 1 - i]) {
@@ -8,7 +8,7 @@ for (let i = 0; i < str.length; i++) {
 }
 
 if (isPalindrome) {
-  console.log('The string is a palindrome');
+  console.log("The string is a palindrome");
 } else {
-  console.log('The string is not a palindrome');
+  console.log("The string is not a palindrome");
 }

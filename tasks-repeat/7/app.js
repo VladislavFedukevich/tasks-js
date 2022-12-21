@@ -1,10 +1,10 @@
 //first
-const str = 'string for testing';
+const str = "string for testing";
 
 console.log(str[0].toUpperCase() + str.slice(1));
 
 //second
-let result = '';
+let result = "";
 
 for (let i = 0; i < str.length; i++) {
   if (i === 0) {
