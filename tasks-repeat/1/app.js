@@ -1,4 +1,4 @@
-const str = "123";
+const str = '123';
 let sum = 0;
 
 for (let elem of str) {
