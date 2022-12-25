@@ -5,5 +5,4 @@ for (let elem of str) {
   sum += Number(elem);
 }
 
-
 console.log(sum);
