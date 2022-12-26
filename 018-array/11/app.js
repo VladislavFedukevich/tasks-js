@@ -1,9 +1,9 @@
-const arr = [1, 2, 3, 4, 'aasf', 34, 'sasf', true, 'asf'];
+const arr = [1, 2, 6, 'asfaf', 5, true, null, 'sfdsf'];
 const final_arr = [];
 
-for (let elem of arr) {
-  if (Number(elem) && elem !== true && elem !== false) {
-    final_arr.push(elem);
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === 'number') {
+    final_arr.push(arr[i]);
   }
 }
 
