@@ -1,4 +1,4 @@
-const str = 'enter the value';
+const str = "enter the value";
 const numberOfRepeats = 3;
 
 let i = 0;
