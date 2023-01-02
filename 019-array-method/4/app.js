@@ -1,21 +1,23 @@
-const value = 5;
-const arr = [];
+const array = [];
 
-for (let i = 0; i < value; i++) {
-  const new_value = prompt('Enter the value: ');
-  arr.push(new_value);
-}
-
-const numbers = arr.filter(function(value) {
-  if (isNaN(value)) {
-    return false;
+while (array.length < 5) {
+  const element = prompt("Enter a number: ");
+  if (isNaN(element)) {
+    console.log("Error");
   } else {
-    return true;
+    array.push(element);
   }
-});
-
-if (numbers.length === 0) {
-  console.log('Array is empty');
-} else {
-  console.log(numbers);
 }
+
+console.log(array);
+
+for (let i = 0; array.length < 5; i++) {
+  const element = prompt("Enter a number:");
+  if (isNaN(element)) {
+    console.log("Error");
+  } else {
+    array.push(element);
+  }
+}
+
+console.log(array);
