@@ -7,4 +7,4 @@ const isPalindrome = (str) => {
   return true;
 }
 
-console.log(isPalindrome('anna'));
+console.log(isPalindrome('annah'));
