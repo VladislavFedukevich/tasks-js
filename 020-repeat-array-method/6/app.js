@@ -1,16 +1,23 @@
-const n = prompt('Enter the length');
+const n = prompt("Enter the length:");
 const arr = [];
 
 for (let i = 0; i < n; i++) {
-  arr.push(prompt('Enter the value'));
+  arr.push(prompt("Enter the value"));
 }
 
-let max = 0;
-let filtered = arr.filter(elem => {
-  if (elem > max) {
-    max = elem;
-    return max;
+let counter = 0;
+arr.forEach(function (elem) {
+  if (
+    elem === "a" ||
+    elem === "e" ||
+    elem === "i" ||
+    elem === "o" ||
+    elem === "u"
+  ) {
+    return null;
+  } else {
+    ++counter;
   }
-})
+});
 
-console.log(max);
+console.log(counter);
