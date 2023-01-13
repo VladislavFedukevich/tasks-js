@@ -4,7 +4,7 @@ const obj = {
   value: 10,
 }
 
-for (let elem in obj) {
-  if (!isNaN(elem))
-    console.log(elem)
+for (let key in obj) {
+  if (!isNaN(key))
+    console.log(key)
 }
