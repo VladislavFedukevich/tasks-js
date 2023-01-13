@@ -9,7 +9,7 @@ let pairs = 0;
 
 for (let key in obj) {
   if (!isNaN(obj[key]))
-  pairs++;
+    pairs++;
 }
 
 console.log(pairs);
