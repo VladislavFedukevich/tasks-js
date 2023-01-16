@@ -5,7 +5,7 @@ const arr = [0, -5, 21, 50, 6, -45];
 
 const validation = (array) => {
   let counter = 0;
-  array.forEach((elem) => isNaN(elem) ? counter++ : null);
+  array.forEach((elem) => (isNaN(elem) ? counter++ : null));
 
   return counter > 0 ? false : true;
 };
@@ -17,8 +17,8 @@ const findMinMaxElements = (array) => {
     let min = array[0];
 
     array.forEach((elem) => {
-      elem > max ? max = elem : null;
-      elem < min ? min = elem : null;
+      elem > max ? (max = elem) : null;
+      elem < min ? (min = elem) : null;
     });
 
     return `min: ${min} and max: ${max}`;
