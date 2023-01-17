@@ -9,6 +9,7 @@ const isSafe = (string) => {
     return false;
   }
 
+  
   for (let i = 0; i < string.length; i++) {
     if (!hasUpper && string[i] >= "A" && string[i] <= "Z") {
       hasUpper = true;
