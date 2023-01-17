@@ -7,10 +7,10 @@ const obj = {
 
 (function () {
   let newObj = {};
-  for (let key in obj) {
+  for (const key in obj) {
     if (typeof obj[key] === "number") {
       newObj[key] = obj[key];
     }
   }
   console.log(newObj);
-})(obj);
+}(obj));
