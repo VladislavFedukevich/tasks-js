@@ -12,4 +12,4 @@ const obj = {
   }
 
   console.log(count);
-}(obj))
+})(obj);
