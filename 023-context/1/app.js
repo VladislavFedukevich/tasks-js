@@ -5,5 +5,3 @@ const reverseNumber = (number) => {
 };
 
 console.log(reverseNumber(n));
-
-
