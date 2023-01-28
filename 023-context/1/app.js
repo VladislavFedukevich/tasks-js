@@ -1,7 +1,6 @@
-const n = prompt("Enter the value:");
+const a = { type: "pie" };
+a.type = 'pudding';
 
-const reverseNumber = (number) => {
-  return number.split("").reverse().join("");
-};
-
-console.log(reverseNumber(n));
+const seconds = a;
+seconds.type = 'fruit';
+console.log(a.type)
