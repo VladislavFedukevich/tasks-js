@@ -12,14 +12,9 @@ const doArray = (val) => {
 
 const filteredArray = (arr) => {
   try {
-    let sum = 0;
-    for (let elem of arr) {
-      if (elem > 0) {
-        sum += Number(elem);
-      }
-    }
+    const newArr = arr.filter(elem => typeof elem === 'number');
 
-    return sum;
+    return newArr;
   } catch (e) {
     return e.message;
   }
