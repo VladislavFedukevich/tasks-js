@@ -1,14 +1,14 @@
-const value = prompt('Enter the value');
+const value = prompt("Enter the value");
 
 const doArray = (val) => {
   let arr = [];
 
   for (let i = 0; i < val; i++) {
-    arr.push(prompt('Enter the item'));
+    arr.push(prompt("Enter the item"));
   }
 
   return arr;
-}
+};
 
 const filteredArray = (arr) => {
   try {
@@ -21,7 +21,7 @@ const filteredArray = (arr) => {
   } catch (e) {
     return e.message;
   }
-}
+};
 
 const array = doArray(value);
 const result = filteredArray(array);
