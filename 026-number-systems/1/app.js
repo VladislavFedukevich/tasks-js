@@ -13,6 +13,7 @@ const doArray = (val) => {
 const filteredArray = (arr) => {
   try {
     const newArr = arr.filter(elem => typeof elem === 'number');
+    if (!newArr.length) throw new Error('Array is empty');
 
     return newArr;
   } catch (e) {
