@@ -13,3 +13,5 @@ btn.addEventListener('click', () => {
     alert(error.message);
   }
 });
+
+const arr = new Array();
