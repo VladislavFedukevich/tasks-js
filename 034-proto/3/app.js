@@ -7,9 +7,10 @@ button.addEventListener("click", function() {
   const result = {};
 
   for (let i = 0; i < inputValues.length; i++) {
-    result[i] = inputValues[i]; 
+    result[i] = inputValues[i];
   }
 
   array.innerHTML = result;
   console.log(result)
 });
+
