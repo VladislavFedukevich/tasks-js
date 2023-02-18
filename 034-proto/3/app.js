@@ -13,4 +13,3 @@ button.addEventListener("click", function() {
   array.innerHTML = result;
   console.log(result)
 });
-
