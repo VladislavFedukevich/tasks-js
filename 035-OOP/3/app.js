@@ -9,8 +9,16 @@ class WordString {
     return this.str.charAt(0).toUpperCase() + this.str.slice(1);
   };
 
-  upperEvery = () => this.str.toUpperCase();
+  upperEvery = () => {
+    const arr = this.str.split(' ');
+
+    const filtered = arr.map(elem => {
+      return elem.charAt(0).toUpperCase() + elem.slice(1)
+    })
+
+    return filtered.join(' ');
+  }
 }
 
-const str = new WordString('qweqwr');
+const str = new WordString('new new new new new');
 console.log(str.upperEvery());
