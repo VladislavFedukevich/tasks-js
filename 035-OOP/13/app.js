@@ -1,6 +1,11 @@
 class ServerPost {
-  middleware = () => {
-    const data = this.controller();
+  middleware = (json) => {
+    const data = this.controller(json);
+
+    data.forEach(elem => {
+      if (typeof elem !== 'object') throw new Error('Not valid');
+    })
+
     return data;
   };
 
@@ -58,5 +63,5 @@ const json = JSON.parse(`{
   "priority": 1
 }`);
 const data = new ServerPost();
-const result = data.controller(json);
+const result = data.middleware(json);
 console.log(result);
