@@ -4,14 +4,14 @@ class Anagram {
     this.secondWord = secondWord;
   }
 
-  validation = () => {
+  #validation = () => {
     return (typeof this.firstWord === "string" && typeof this.secondWord === "string");
   }
 
   checkAnagram = () => {
     try {
-      if (!this.validation()) throw new Error('Not a string format');
-      
+      if (!this.#validation()) throw new Error('Not a string format');
+
       const firstArray = this.firstWord.split("");
       const secondArray = this.secondWord.split("");
       let count = 0;
