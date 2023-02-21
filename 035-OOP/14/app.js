@@ -3,7 +3,7 @@ class ServerPut {
     const data = this.controller(json);
 
     if (typeof json !== "object") throw new Error("Not valid json");
-    
+
     return data;
   };
 
@@ -46,16 +46,19 @@ class ServerPut {
       { id: "go", label: "GO", category: "programmingLanguages", priority: 3 },
     ];
 
-    data.forEach((elem) => {
-      if (elem.id === json.id) {
-        const index = data.indexOf(elem);
-        data.splice(index, 1);
-      }
-    });
+    // data.forEach((elem) => {
+    //   if (elem.id === json.id) {
+    //     const index = data.indexOf(elem);
+    //     data.splice(index, 1);
+    //   }
+    // });
 
-    data.push({ ...json });
+    // data.push({ ...json });
 
-    return data;
+    const filtered = data.filter(elem => elem.id !== json.id);
+
+    filtered.push(json);
+    return filtered;
   };
 }
 

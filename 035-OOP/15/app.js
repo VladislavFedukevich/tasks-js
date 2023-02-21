@@ -1,19 +1,15 @@
-class ServerPost {
+class ServerDelete {
   middleware = (json) => {
     const data = this.controller(json);
 
-    if (typeof json !== "object") throw new Error("Not valid json");
+    if (typeof json !== 'object') throw new Error('Not valid');
 
     return data;
   };
 
   controller = (json) => {
-    try {
-      const data = this.service(json);
-      return data;
-    } catch (error) {
-      return error.message;
-    }
+    const data = this.service(json);
+    return data;
   };
 
   service = (json) => {
@@ -23,6 +19,12 @@ class ServerPost {
 
   repository = (json) => {
     const data = [
+      {
+        id: "javascript",
+        label: "JavaScript",
+        category: "programmingLanguages",
+        priority: 1,
+      },
       {
         id: "typescript",
         label: "TypeScript",
@@ -44,20 +46,15 @@ class ServerPost {
       { id: "go", label: "GO", category: "programmingLanguages", priority: 3 },
     ];
 
-    const filter = data.filter((elem) => elem.label == json.label);
+    const index = data.find((elem) => elem.id === json.id);
+    data.splice(index, 1);
 
-    if (filter.length) throw new Error("Error");
-
-    data.push({ ...json, id: json.label.toLowerCase() });
     return data;
   };
 }
 
-const json = JSON.parse(`{
-  "label": "JavaScript",
-  "category": "programmingLanguages",
-  "priority": 1
-}`);
-const data = new ServerPost();
+const json = JSON.parse(`{ "id": "javascript" }`);
+
+const data = new ServerDelete();
 const result = data.middleware(json);
 console.log(result);
