@@ -1,4 +1,4 @@
-class ServerPost {
+class ServerPut {
   middleware = (json) => {
     const data = this.controller(json);
 
@@ -8,12 +8,8 @@ class ServerPost {
   };
 
   controller = (json) => {
-    try {
-      const data = this.service(json);
-      return data;
-    } catch (error) {
-      return error.message;
-    }
+    const data = this.service(json);
+    return data;
   };
 
   service = (json) => {
@@ -23,6 +19,12 @@ class ServerPost {
 
   repository = (json) => {
     const data = [
+      {
+        id: "javascript",
+        label: "JavaScript",
+        category: "programmingLanguages",
+        priority: 1,
+      },
       {
         id: "typescript",
         label: "TypeScript",
@@ -44,23 +46,23 @@ class ServerPost {
       { id: "go", label: "GO", category: "programmingLanguages", priority: 3 },
     ];
 
-    const filter = data.filter((elem) => elem.label == json.label);
-    console.log(filter);
+    data.forEach((elem) => {
+      if (elem.id === json.id) {
+        const index = data.indexOf(elem);
+        data.splice(index, 1);
+      }
+    });
 
-    if (filter.length) {
-      throw new Error("Error");
-    }
+    data.push({ ...json });
 
-    data.push({ ...json, id: json.label.toLowerCase() });
     return data;
   };
 }
 
-const json = JSON.parse(`{
-  "label": "JavaScript",
-  "category": "programmingLanguages",
-  "priority": 1
-}`);
-const data = new ServerPost();
+const json = JSON.parse(
+  `{"id": "javascript", "label": "JavaScript", "category": "programmingLanguages", "priority": 1}`
+);
+
+const data = new ServerPut();
 const result = data.middleware(json);
 console.log(result);
