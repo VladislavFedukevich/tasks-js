@@ -1,42 +1,39 @@
 class DomHtml {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
+  constructor() {
     this.generateEvent();
   }
 
-  generateEvent = () => {
-    const btn = document.querySelector('button');
-    btn.addEventListener('click', () => {
-      this.doSum();
-      this.doDivide();
-      this.doMultiply();
-      this.doMinus();
-    })
+  generateEvent() {
+    const btn = document.querySelector(`.btn`);
+    btn.addEventListener(`click`, () => {
+      const inpOne = +document.querySelector(`.inpOne`).value;
+      const inpTwo = +document.querySelector(`.inpTwo`).value;
+      this.doPlus(inpOne, inpTwo);
+      this.doMinus(inpOne, inpTwo);
+      this.doMultiply(inpOne, inpTwo);
+      this.doDivide(inpOne, inpTwo);
+    });
   }
 
-  doSum = () => {
-    const text = document.querySelector('.sum');
-    text.innerHTML += Number(this.x.value) + Number(this.y.value);
+  doPlus(inpOne, inpTwo) {
+    const plus = document.querySelector(`.plus`);
+    plus.innerHTML = inpOne + inpTwo;
   }
 
-  doDivide = () => {
-    const text = document.querySelector('.divide');
-    text.innerHTML += Number(this.x.value) / Number(this.y.value);
+  doMinus(inpOne, inpTwo) {
+    const minus = document.querySelector(`.minus`);
+    minus.innerHTML = inpOne - inpTwo;
   }
 
-  doMultiply = () => {
-    const text = document.querySelector('.multiply');
-    text.innerHTML += Number(this.x.value) * Number(this.y.value);
+  doMultiply(inpOne, inpTwo) {
+    const multiply = document.querySelector(`.multiply`);
+    multiply.innerHTML = inpOne * inpTwo;
   }
 
-  doMinus = () => {
-    const text = document.querySelector('.minus');
-    text.innerHTML += Number(this.x.value) - Number(this.y.value);
+  doDivide(inpOne, inpTwo) {
+    const divide = document.querySelector(`.divide`);
+    divide.innerHTML = inpOne / inpTwo;
   }
 }
 
-const firstInp = document.querySelector('.first')
-const secondInp = document.querySelector('.second');
-
-const domHtml = new DomHtml(firstInp, secondInp);
+let domHtml = new DomHtml();
