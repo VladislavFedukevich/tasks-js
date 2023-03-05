@@ -1,26 +1,20 @@
-class Worker {
-  constructor(name, surname) {
-    this.name = name;
-    this.surname = surname;
-  }
+class NumberArray {
+  showArr() {
+    const arr = [];
+    for (let i = 0; i < 5; i++) {
+      arr.push(Math.floor(Math.random() * 100) + 1);
+    }
 
-  getInfo = () => {
-    return `name: ${this.name}, surname: ${this.surname}`;
-  }
-}
-
-class Singer extends Worker {
-  constructor(name, surname, years, birth, style) {
-    super(name, surname);
-    this.years = years;
-    this.birth = birth;
-    this.style = style;
-  }
-
-  getInfo = () => {
-    return `name: ${this.name}, surname: ${this.surname}, years: ${this.years}, birth: ${this.birth}, style: ${this.style}`;
+    return arr;
   }
 }
 
-const singer = new Singer('John', 'Smith', 24, '24.08.2002', 'pop');
-console.log(singer.getInfo());
+class ConsoleArray extends NumberArray {
+  showArr() {
+    const arr = super.showArr();
+    console.log(arr);
+  }
+}
+
+const arr = new ConsoleArray();
+arr.showArr();
