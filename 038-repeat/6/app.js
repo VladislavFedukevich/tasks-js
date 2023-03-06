@@ -5,12 +5,16 @@ const arr = [];
 
 btn.addEventListener('click', () => {
   try {
-    if (!input.value) throw new Error('Input is empty');
+    if(!input.value) throw new Error('Input is empty');
+
 
     arr.push(input.value);
 
     result.innerHTML = arr;
+    input.value = '';
+    input.style = "border: 1px solid black";
   } catch (error) {
     alert(error.message);
+    input.style = "border: 1px solid red";
   }
-});
+})
