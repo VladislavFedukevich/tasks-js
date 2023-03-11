@@ -6,8 +6,8 @@ class DomHtml {
   generateEvent() {
     const btn = document.querySelector(`.btn`);
     btn.addEventListener(`click`, () => {
-      const inpOne = +document.querySelector(`.inpOne`).value;
-      const inpTwo = +document.querySelector(`.inpTwo`).value;
+      const inpOne = Number(document.querySelector(`.inpOne`)).value;
+      const inpTwo = Number(document.querySelector(`.inpTwo`)).value;
       this.doPlus(inpOne, inpTwo);
       this.doMinus(inpOne, inpTwo);
       this.doMultiply(inpOne, inpTwo);
