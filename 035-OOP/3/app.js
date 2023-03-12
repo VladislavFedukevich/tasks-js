@@ -21,4 +21,4 @@ class WordString {
 }
 
 const str = new WordString('new new new new new');
-console.log(str.upperEvery());
+console.log(str.reverseString());
