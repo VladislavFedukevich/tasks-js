@@ -46,15 +46,6 @@ class ServerPut {
       { id: "go", label: "GO", category: "programmingLanguages", priority: 3 },
     ];
 
-    // data.forEach((elem) => {
-    //   if (elem.id === json.id) {
-    //     const index = data.indexOf(elem);
-    //     data.splice(index, 1);
-    //   }
-    // });
-
-    // data.push({ ...json });
-
     const filtered = data.filter(elem => elem.id !== json.id);
 
     filtered.push(json);
