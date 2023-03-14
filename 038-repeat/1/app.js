@@ -13,7 +13,9 @@ const filteredArray = (arr) => {
   try {
     isValid(arr);
 
-    const newArr = arr.filter((elem) => elem[0] === "a" || elem[0] === "h" ? true : false);
+    const newArr = arr.filter((elem) =>
+      elem[0] === "a" || elem[0] === "h" ? true : false
+    );
 
     return newArr;
   } catch (error) {
