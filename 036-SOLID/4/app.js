@@ -27,7 +27,7 @@ class ServerById {
       { id: 5, name: "Maria", age: 27 },
     ];
 
-    const filtered = data.filter(elem => elem.id === json.id);
+    const filtered = data.filter((elem) => elem.id === json.id);
     return filtered;
   };
 }
