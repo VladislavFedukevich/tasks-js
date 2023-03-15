@@ -8,7 +8,7 @@ const doubleArr = [];
 btn.addEventListener("click", () => {
   try {
     if (!input.value) throw new Error("Input is empty");
-    if (isNaN(input.value)) throw new Error('Not a number');
+    if (isNaN(input.value)) throw new Error("Not a number");
 
     arr.push(input.value);
     doubleArr.push(input.value * 2);
@@ -16,7 +16,6 @@ btn.addEventListener("click", () => {
     result.innerHTML = arr;
     double.innerHTML = doubleArr;
     input.value = "";
-
   } catch (error) {
     alert(error.message);
   }
