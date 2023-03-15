@@ -1,4 +1,4 @@
-const result = document.querySelector('.container');
+const result = document.querySelector(".container");
 
 const generate = () => {
   const arr = [];
@@ -7,16 +7,16 @@ const generate = () => {
   }
 
   return arr;
-}
+};
 
 const numbers = generate();
 
-result.innerHTML = numbers.map((num) => `<div>${num}</div>`).join('');
+result.innerHTML = numbers.map((num) => `<div>${num}</div>`).join("");
 
-result.addEventListener('click', (event) => {
+result.addEventListener("click", (event) => {
   const clickedElement = event.target;
 
-  if (clickedElement.tagName === 'DIV') {
+  if (clickedElement.tagName === "DIV") {
     const value = parseInt(clickedElement.innerText);
     const index = numbers.indexOf(value);
     if (index !== -1) {
