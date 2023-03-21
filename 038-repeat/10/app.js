@@ -16,7 +16,3 @@
 //     error.message.style = "color: red";
 //   }
 // });
-
-console.log(0 == []);
-console.log(0 === []);
-console.log(0 == '');
